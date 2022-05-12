@@ -11,6 +11,7 @@ namespace Lesson_1
         private SpriteBatch _spriteBatch;
 
         Texture2D ballTexture;
+        Texture2D guyinsuitTexture;
 
         public Lesson1()
         {
@@ -33,6 +34,7 @@ namespace Lesson_1
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             // TODO: use this.Content to load your game content here
             ballTexture = Content.Load<Texture2D>("Balls");
+            guyinsuitTexture = Content.Load<Texture2D>("GuyInSuit");
         }
         protected override void Update(GameTime gameTime)
         {
@@ -48,6 +50,7 @@ namespace Lesson_1
             _spriteBatch.Begin();
 
             _spriteBatch.Draw(ballTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(guyinsuitTexture, new Vector2(0, 0), Color.White);
 
             _spriteBatch.End();
             base.Draw(gameTime);
